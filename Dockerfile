@@ -16,7 +16,7 @@ RUN apk add --no-cache --update bash curl git make build-base automake autoconf 
     ./configure --prefix=/app && \
     make install && \
     rm -fr /build && \
-    apk del hiredis-dev postgresql-dev mysql-dev sqlite-dev linux-headers libevent-dev openssl-dev readline-dev automake autoconf build-base make git && \
+    apk del hiredis-dev postgresql-dev mysql-dev sqlite-dev linux-headers libevent-dev libressl-dev readline-dev automake autoconf build-base make git && \
     rm -rf /var/cache/apk/*
 
 WORKDIR /app
